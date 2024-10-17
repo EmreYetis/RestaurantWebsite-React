@@ -1,0 +1,132 @@
+.header {
+    background-color: #8D6E63;
+    color: #FFF8E1;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .nav-list li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-list a {
+    color: #FFF8E1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: #FFE0B2;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .nav {
+      flex-basis: 100%;
+      display: none;
+      width: 100%;
+    }
+  
+    .nav-open {
+      display: block;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      width: 100%;
+    }
+  
+    .nav-list li {
+      margin: 0.5rem 0;
+    }
+  
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+  
+    .menu-icon {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: #FFF8E1;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+  
+    .menu-icon::before,
+    .menu-icon::after {
+      content: '';
+      position: absolute;
+      width: 100%; /* Ana elementin genişliğini kullan */
+      height: 100%;
+      background-color: #FFF8E1;
+      transition: all 0.3s ease;
+      left: 0; /* Sol kenarı ana elementle hizala */
+    }
+  
+    .menu-icon::before {
+      top: -6px;
+    }
+  
+    .menu-icon::after {
+      bottom: -6px;
+    }
+  
+    .nav-open + .menu-toggle .menu-icon {
+      background-color: transparent;
+    }
+  
+    .nav-open + .menu-toggle .menu-icon::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  
+    .nav-open + .menu-toggle .menu-icon::after {
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
+  }

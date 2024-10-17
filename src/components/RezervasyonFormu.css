@@ -1,0 +1,43 @@
+.rezervasyon-formu {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 25px;
+}
+
+.rezervasyon-formu form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rezervasyon-formu input,
+.rezervasyon-formu select,
+.rezervasyon-formu textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #8D6E63;
+  border-radius: 4px;
+}
+
+.rezervasyon-formu button {
+  background-color: #8D6E63;
+  color: #FFF8E1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rezervasyon-formu button:hover {
+  background-color: #6D4C41;
+}
+
+@media (max-width: 768px) {
+  .rezervasyon-formu {
+    width: 90%;
+  }
+}

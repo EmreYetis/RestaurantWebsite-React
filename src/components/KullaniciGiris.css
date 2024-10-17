@@ -1,0 +1,42 @@
+.kullanici-giris {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 25px;
+
+}
+
+.kullanici-giris form {
+  display: flex;
+  flex-direction: column;
+}
+
+.kullanici-giris input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #8D6E63;
+  border-radius: 4px;
+}
+
+.kullanici-giris button {
+  background-color: #8D6E63;
+  color: #FFF8E1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kullanici-giris button:hover {
+  background-color: #6D4C41;
+}
+
+@media (max-width: 768px) {
+  .kullanici-giris {
+    width: 90%;
+  }
+}
